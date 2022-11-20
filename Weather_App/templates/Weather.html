@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast App</title>
+</head>
+
+<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather in App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/search.css' %}">
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center title">Weather App</h1>
+      <form class="searching">
+
+        <input type="text" name="city" class="input" autocomplete="off" placeholder="Search">
+        <a class="fa fa-search"></a>
+
+      </form>
+
+      <div class="card rounded my-3 shadow-lg d-none back-card">
+        <div class="card-top text-center">
+          <div class="city-name my-3">
+            <p></p>
+            <span>...</span>
+          </div>
+          <img src="{%static 'images/night_image.svg' %}" alt="" class="card-img-top time">
+        </div>
+
+        <div class="card-body">
+          <div class="card-mid row">
+            <div class="col-8 text-center temp">
+              <span>&deg;C</span>
+            </div>
+            <div class="col-4 condition-temp">
+              <p class="condition"></p>
+              <p class="high">&deg;C</p>
+              <p class="low">&deg;C</p>
+            </div>
+          </div>
+
+          <div class="icon-container card shadow mx-auto">
+            <img src="{%static 'images/cloud.svg' %}" alt="" class="card-img-top time">
+          </div>
+          <div class="card-bottom px-5 py-4 row">
+            <div class="col text-center">
+              <p>&deg;C</p>
+              <span>Feels Like</span>
+            </div>
+            <div class="col text-center">
+              <p></p>
+              <span>Humidity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{%static 'js/index.js' %}"></script>
+    <script src="{%static 'js/request.js' %}"></script>
+  </body>
+
+</html>
+</body>
+
+</html>
